@@ -1,7 +1,13 @@
 {
   programs.git = {
     enable = true;
-    userName = "Sternwarts1881";
-    userEmail = "dbinbogafbs@gmail.com";
+    settings = {
+      user = {
+        name = "Sternwarts1881";
+        email = "dbinbogafbs@gmail.com";
+      };
+
+    };
+
   };
 }

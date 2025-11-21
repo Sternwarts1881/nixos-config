@@ -14,7 +14,7 @@
   };
 
   environment = {
-    pathsToLink = [ "/share/zsh" ];
+    pathsToLink = [ "/share/fish" ];
     sessionVariables = {
       NIXOS_OZONE_WL = "1";
     };

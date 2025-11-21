@@ -6,19 +6,16 @@ let
   };
 in {
   programs = {
-    zsh = {
+    fish = {
       enable = true;
-      autosuggestion.enable = true;
-      syntaxHighlighting.enable = true;
       shellAliases = myAliases;
-      oh-my-zsh = {
-        enable = true;
-        plugins = [
-          "git"
-          "history"
-          "wd"
-        ];
-      };
+      generateCompletions = true;
+      vendor= {
+        functions.enable = true;
+        config.enable = true;
+        completions.enable = true;
+
+        };
     };
   };
 }
