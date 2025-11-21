@@ -105,6 +105,7 @@ in {
       pkgs.libgcc
       wineWowPackages.stable
       winetricks
+      foliate
     ];
   };
 }

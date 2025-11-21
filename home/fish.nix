@@ -10,11 +10,13 @@ in {
       enable = true;
       shellAliases = myAliases;
       generateCompletions = true;
+      interactiveShellInit = ''
+    set fish_greeting
+  '';
       vendor= {
         functions.enable = true;
         config.enable = true;
         completions.enable = true;
-
         };
     };
   };
