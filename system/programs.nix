@@ -34,6 +34,7 @@ in {
     systemPackages = with pkgs; [
       kdePackages.krdp
       pkgs.alacritty
+      obsidian
       bottles
       git
       mesa-demos
