@@ -10,6 +10,7 @@ in {
     kdeconnect.enable = true;
     partition-manager.enable = true;
     fish.enable = true;
+    npm.enable = true;
 
     corectrl = {
       enable = true;
@@ -33,7 +34,7 @@ in {
   environment = {
     systemPackages = with pkgs; [
       kdePackages.krdp
-      pkgs.alacritty
+      alacritty
       obsidian
       bottles
       git
@@ -43,18 +44,18 @@ in {
       lshw
       nil
       nvtopPackages.full
-      pkgs.firefox
+      firefox
       neovim
       obs-studio
       okteta
-      pkgs.libreoffice
+      libreoffice
       pciutils
       prismlauncher
       protonup-ng
       protonup-qt
-      pkgs.kdePackages.ark
-      pkgs.mullvad-vpn
-      pkgs.conda
+      kdePackages.ark
+      mullvad-vpn
+      conda
       qbittorrent
       joplin-desktop
       ryzenadj
@@ -62,10 +63,10 @@ in {
       unrar
       pkgs-stable.vesktop
       vlc
-      pkgs.mpv
+      mpv
       vulkan-tools
       wget
-      pkgs.vscode
+      vscode
       (python3.withPackages (ps: with ps;[
       pip
       requests
@@ -74,7 +75,7 @@ in {
       cheese
       chromium
       kdePackages.discover
-      pkgs.gnome-clocks
+      gnome-clocks
       kdePackages.kcalc
       kdePackages.kate
       kdePackages.okular
@@ -95,15 +96,15 @@ in {
       heroic
       lutris
       opentabletdriver
-      pkgs.papirus-icon-theme
-      pkgs.papirus-folders
+      papirus-icon-theme
+      papirus-folders
       libsForQt5.qtstyleplugin-kvantum
-      pkgs.cmake
-      pkgs.gnumake
-      pkgs.cmakeWithGui
-      pkgs.supergfxctl-plasmoid
-      pkgs.where-is-my-sddm-theme
-      pkgs.libgcc
+      cmake
+      gnumake
+      cmakeWithGui
+      supergfxctl-plasmoid
+      where-is-my-sddm-theme
+      libgcc
       wineWowPackages.stable
       winetricks
       foliate
