@@ -4,7 +4,6 @@ let
   pkgs-stable = inputs.nixpkgs-stable.legacyPackages.x86_64-linux;
 in {
   programs = {
-    direnv.enable = true;
     gamemode.enable = true;
     java.enable = true;
     kdeconnect.enable = true;
@@ -27,6 +26,11 @@ in {
       extraCompatPackages = [pkgs.proton-ge-bin];
     };
 
+    direnv = {
+      enable = true;
+      nix-direnv.enable = true;
+    };
+
   };
 
 
@@ -34,6 +38,12 @@ in {
   environment = {
     systemPackages = with pkgs; [
       kdePackages.krdp
+      nero-umu
+      volta
+      dotnet-sdk
+      nodejs_20
+      nodejs
+      nodemon
       alacritty
       obsidian
       bottles
@@ -108,6 +118,7 @@ in {
       wineWowPackages.stable
       winetricks
       foliate
+      winboat
     ];
   };
 }
