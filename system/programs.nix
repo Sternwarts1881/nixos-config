@@ -37,6 +37,7 @@ in {
 
   environment = {
     systemPackages = with pkgs; [
+      ffmpeg
       kdePackages.krdp
       nero-umu
       volta
