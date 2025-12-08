@@ -38,6 +38,8 @@ in {
   environment = {
     systemPackages = with pkgs; [
       ffmpeg
+      kara
+      plasma-panel-colorizer
       kdePackages.krdp
       nero-umu
       volta
