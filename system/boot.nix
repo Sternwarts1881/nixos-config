@@ -11,7 +11,6 @@ in {
       efi.canTouchEfiVariables = true;
     };
     supportedFilesystems.exfat = true;
-    kernelPackages = pkgs.linuxPackages_latest;
     kernelParams = [
       "amdgpu.abmlevel=0"
       # "amdgpu.dcdebugmask=0x10"

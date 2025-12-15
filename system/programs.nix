@@ -38,6 +38,9 @@ in {
   environment = {
     systemPackages = with pkgs; [
       ffmpeg
+      xorg.xrdb
+      xsettingsd
+      posy-cursors
       kara
       plasma-panel-colorizer
       kdePackages.krdp
