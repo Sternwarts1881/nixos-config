@@ -41,6 +41,10 @@ in {
       xorg.xrdb
       xsettingsd
       posy-cursors
+      pear-desktop
+      pnpm
+      rclone
+      rclone-ui
       kara
       plasma-panel-colorizer
       kdePackages.krdp
