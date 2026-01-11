@@ -25,6 +25,12 @@
 
   };
 
+  powerManagement.resumeCommands = ''
+  # r8152 sürücüsünü (Realtek Ethernet) yeniden başlat
+  ${pkgs.kmod}/bin/modprobe -r r8152
+  ${pkgs.kmod}/bin/modprobe r8152
+'';
+
 
 
 }

@@ -38,6 +38,11 @@ in {
   environment = {
     systemPackages = with pkgs; [
       ffmpeg
+      scanmem
+      duckstation
+      pcsx2
+      rpcs3
+      ppsspp
       xorg.xrdb
       xsettingsd
       posy-cursors
@@ -51,6 +56,7 @@ in {
       nero-umu
       volta
       dotnet-sdk
+      dotnet-sdk_9
       nodejs_20
       nodejs
       nodemon

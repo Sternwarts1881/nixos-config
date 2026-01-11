@@ -33,15 +33,19 @@
 
   systemd = {
     services = {
-      nvidia-oc = {
-        script = ''
-          ${pkgs.nix}/bin/nix-shell -I nixpkgs=${inputs.nixpkgs} /etc/nixos/scripts/nvidia-oc.nix
-        '';
-        wantedBy = ["multi-user.target"];
-        serviceConfig = {
-          Type = "oneshot";
-        };
-      };
+
+
+   #   nvidia-oc = {
+    #    script = ''
+     #     ${pkgs.nix}/bin/nix-shell -I nixpkgs=${inputs.nixpkgs} /etc/nixos/scripts/nvidia-oc.nix
+      #  '';
+      #  wantedBy = ["multi-user.target"];
+      #  serviceConfig = {
+      #    Type = "oneshot";
+      #  };
+    #  };
+
+
     };
   };
 }
