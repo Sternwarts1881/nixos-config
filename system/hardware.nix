@@ -2,14 +2,31 @@
   services.hardware.bolt.enable = true;
 
   hardware = {
-    cpu.amd.ryzen-smu.enable = true;
     sensor.iio.enable = true;
     bluetooth = {
       enable = true;
       powerOnBoot = true;
     };
 
-    cpu.amd.updateMicrocode = true; # amd-ucode
+    graphics = {
+      enable = true;
+      enable32Bit = true;
+    };
+
+    cpu = {
+      amd = {
+        ryzen-smu.enable = true;
+        updateMicrocode = true; # amd-ucode
+      };
+    };
+
+    amdgpu = {
+      overdrive={
+        enable = true;
+        ppfeaturemask = "0xffffffff";
+      };
+    };
+
     sane.enable = true; # sane (tarayıcı desteği)
     enableRedistributableFirmware = true;
   };

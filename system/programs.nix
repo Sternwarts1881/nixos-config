@@ -10,14 +10,7 @@ in {
     partition-manager.enable = true;
     fish.enable = true;
     npm.enable = true;
-
-    corectrl = {
-      enable = true;
-      gpuOverclock = {
-        enable = true;
-        ppfeaturemask = "0xffffffff";
-      };
-    };
+    corectrl.enable=true;
 
     steam = {
       enable = true;
@@ -33,7 +26,21 @@ in {
 
   };
 
-
+  virtualisation={
+    docker = {
+      enable = true;
+      # Set up resource limits
+      daemon.settings = {
+        experimental = true;
+        default-address-pools = [
+          {
+            base = "172.30.0.0/16";
+            size = 24;
+          }
+        ];
+      };
+    };
+  };
 
   environment = {
     systemPackages = with pkgs; [
@@ -137,22 +144,4 @@ in {
       winboat
     ];
   };
-  virtualisation={
-    docker = {
-      enable = true;
-      # Set up resource limits
-      daemon.settings = {
-        experimental = true;
-        default-address-pools = [
-          {
-            base = "172.30.0.0/16";
-            size = 24;
-          }
-        ];
-      };
-    };
-  };
-
-
-
 }
