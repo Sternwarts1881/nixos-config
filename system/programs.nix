@@ -45,6 +45,7 @@ in {
   environment = {
     systemPackages = with pkgs; [
       ffmpeg
+      gparted
       scanmem
       duckstation
       pcsx2

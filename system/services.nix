@@ -31,10 +31,8 @@
   ${pkgs.kmod}/bin/modprobe r8152
 '';
 
- swapDevices = [ {
-    device = "/dev/nvme0n1p3";
-    size = 16*1024;
-  } ];
-
+  zramSwap = {
+    enable = true;
+  };
 
 }
