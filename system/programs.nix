@@ -55,7 +55,6 @@ in {
       }))
 
       pcsx2
-      rpcs3
       ppsspp
       xorg.xrdb
       xsettingsd
