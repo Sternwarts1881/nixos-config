@@ -47,14 +47,16 @@ in {
       ffmpeg
       gparted
       scanmem
+      protege
 
       (duckstation.overrideAttrs (prev: {
         src = prev.src.overrideAttrs (prevSrc: {
           outputHash = "sha256-ksmxdYLFWYIA3Kp8dztyN4UxeJFvpNRmN79TspwZHuw=";
         });
       }))
-
+      opentrack
       pcsx2
+      protonplus
       ppsspp
       xorg.xrdb
       xsettingsd
@@ -144,6 +146,8 @@ in {
       supergfxctl-plasmoid
       where-is-my-sddm-theme
       libgcc
+      wine
+      wine64
       wineWowPackages.stable
       winetricks
       foliate
