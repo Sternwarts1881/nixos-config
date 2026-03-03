@@ -48,6 +48,7 @@ in {
       gparted
       scanmem
       protege
+      camunda-modeler
       (duckstation.overrideAttrs (prev: {
         src = prev.src.overrideAttrs (prevSrc: {
           outputHash = "sha256-ksmxdYLFWYIA3Kp8dztyN4UxeJFvpNRmN79TspwZHuw=";
