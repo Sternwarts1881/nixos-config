@@ -34,11 +34,11 @@
   services.xserver.wacom.enable = true;
 
 
-      powerManagement = {
-      cpufreq = {
-        min = 200000;
-        max = 3200000;
+#      powerManagement = {
+ #     cpufreq = {
+  #      min = 200000;
+   #     max = 3200000;
 
-      };
-    };
+  #    };
+  #  };
 }

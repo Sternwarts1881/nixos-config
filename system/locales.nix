@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  time.timeZone = "Europe/Berlin";
+  time.timeZone = "Europe/Istanbul";
 
   i18n = {
     defaultLocale = "en_GB.UTF-8";

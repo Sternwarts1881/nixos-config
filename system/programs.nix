@@ -12,6 +12,11 @@ in {
     npm.enable = true;
     corectrl.enable=true;
 
+    appimage = {
+      enable = true;
+      binfmt = true;
+    };
+
     steam = {
       enable = true;
       remotePlay.openFirewall = true;
@@ -49,11 +54,6 @@ in {
       scanmem
       protege
       camunda-modeler
-      (duckstation.overrideAttrs (prev: {
-        src = prev.src.overrideAttrs (prevSrc: {
-          outputHash = "sha256-ksmxdYLFWYIA3Kp8dztyN4UxeJFvpNRmN79TspwZHuw=";
-        });
-      }))
       rpcs3
       azahar
       dolphin-emu
@@ -61,14 +61,13 @@ in {
       pcsx2
       protonplus
       ppsspp
-      xorg.xrdb
+      xrdb
       xsettingsd
       posy-cursors
       pear-desktop
       pnpm
       rclone
       rclone-ui
-      kara
       kdePackages.krdp
       nero-umu
       volta
@@ -123,7 +122,6 @@ in {
       kdePackages.kcalc
       kdePackages.kate
       kdePackages.okular
-      rmpc
       fastfetch
       nano
       powertop
@@ -147,11 +145,10 @@ in {
       gnumake
       cmakeWithGui
       supergfxctl-plasmoid
-      where-is-my-sddm-theme
       libgcc
       wine
       wine64
-      wineWowPackages.stable
+      wineWow64Packages.stable
       winetricks
       foliate
       winboat
