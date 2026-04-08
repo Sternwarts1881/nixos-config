@@ -49,6 +49,7 @@ in {
 
   environment = {
     systemPackages = with pkgs; [
+      gnome-tweaks
       ffmpeg
       gparted
       scanmem
@@ -67,7 +68,6 @@ in {
       pear-desktop
       pnpm
       rclone
-      rclone-ui
       kdePackages.krdp
       nero-umu
       volta
