@@ -49,6 +49,7 @@ in {
 
   environment = {
     systemPackages = with pkgs; [
+      scrcpy
       starship
       ghostty
       jetbrains.rider
