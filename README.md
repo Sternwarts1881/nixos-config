@@ -1,1 +1,1 @@
-My stupid fucking nixos config
+My nixos config
