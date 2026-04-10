@@ -2,7 +2,7 @@
 
 {
   users.users.flkr = {
-    shell = pkgs.fish;
+    shell = pkgs.zsh;
     isNormalUser = true;
     description = "Deniz Binboğa";
     extraGroups = ["networkmanager" "wheel" "docker" "video" "audio" "corectrl"];

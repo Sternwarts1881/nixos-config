@@ -8,7 +8,7 @@ in {
     java.enable = true;
     kdeconnect.enable = true;
     partition-manager.enable = true;
-    fish.enable = true;
+    zsh.enable = true;
     npm.enable = true;
     corectrl.enable=true;
 
@@ -49,6 +49,9 @@ in {
 
   environment = {
     systemPackages = with pkgs; [
+      starship
+      ghostty
+      jetbrains.rider
       gnome-tweaks
       ffmpeg
       gparted
@@ -76,7 +79,6 @@ in {
       nodejs_20
       nodejs
       nodemon
-      alacritty
       obsidian
       bottles
       git

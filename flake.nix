@@ -27,6 +27,14 @@
         specialArgs = {inherit inputs;};
 	    modules = [
           ./configuration.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = {inherit inputs;};
+            # Home Manager konfigürasyon dosyanızı buraya bağlayın
+            home-manager.users.flkr = import ./home/default.nix;
+          }
         ];
       };
     };
