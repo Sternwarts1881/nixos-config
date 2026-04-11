@@ -23,5 +23,6 @@ in {
         patches = [ ../patches/mt7922-bluetooth-patch ];
       }))
     ];
+    kernelModules = ["ntsync"];
   };
 }
