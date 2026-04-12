@@ -7,6 +7,11 @@
     printing.enable = true;
     system76-scheduler.enable = true;
 
+    udev.extraRules = ''
+  ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="0bda", ATTR{idProduct}=="8153", ATTR{power/autosuspend}="-1"
+  ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="0bda", ATTR{idProduct}=="8153", ATTR{power/control}="on"
+'';
+
     xserver = {
       enable = true;
     };

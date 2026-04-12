@@ -49,7 +49,8 @@ in {
 
   environment = {
     systemPackages = with pkgs; [
-      scrcpy
+      tree-sitter
+      haruna
       starship
       ghostty
       jetbrains.rider
@@ -57,12 +58,9 @@ in {
       ffmpeg
       gparted
       scanmem
-      protege
-      camunda-modeler
       rpcs3
       azahar
       dolphin-emu
-      opentrack
       pcsx2
       protonplus
       ppsspp
@@ -149,6 +147,7 @@ in {
       cmakeWithGui
       supergfxctl-plasmoid
       libgcc
+      gcc
       wine
       wine64
       wineWow64Packages.stable
