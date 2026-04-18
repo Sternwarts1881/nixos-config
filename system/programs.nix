@@ -50,6 +50,10 @@ in {
 
   environment = {
     systemPackages = with pkgs; [
+      eas-cli
+      tor
+      tor-browser
+      proton-vpn
       android-studio
       android-tools
       ntfs3g
