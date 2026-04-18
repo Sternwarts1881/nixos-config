@@ -12,6 +12,7 @@ in {
     npm.enable = true;
     corectrl.enable=true;
 
+
     appimage = {
       enable = true;
       binfmt = true;
@@ -49,6 +50,9 @@ in {
 
   environment = {
     systemPackages = with pkgs; [
+      android-studio
+      android-tools
+      ntfs3g
       tree-sitter
       haruna
       starship

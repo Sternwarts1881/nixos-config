@@ -5,7 +5,7 @@
     shell = pkgs.zsh;
     isNormalUser = true;
     description = "Deniz Binboğa";
-    extraGroups = ["networkmanager" "wheel" "docker" "video" "audio" "corectrl"];
+    extraGroups = ["networkmanager" "wheel" "docker" "video" "audio" "corectrl" "adbusers" "kvm"];
     packages = [];
   };
 
