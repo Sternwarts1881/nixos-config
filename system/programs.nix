@@ -51,6 +51,9 @@ in {
   environment = {
     systemPackages = with pkgs; [
       eas-cli
+      code-cursor
+      cursor-cli
+      ryubing
       tor
       tor-browser
       proton-vpn
@@ -90,7 +93,7 @@ in {
       bottles
       git
       mesa-demos
-      jdk17
+      jdk21
       kdePackages.plasma-thunderbolt
       lshw
       nil
