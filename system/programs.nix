@@ -51,7 +51,6 @@ in {
   environment = {
     systemPackages = with pkgs; [
       vesktop
-      mangohud
       cargo
       rustc
       onlyoffice-desktopeditors
