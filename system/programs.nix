@@ -50,6 +50,11 @@ in {
 
   environment = {
     systemPackages = with pkgs; [
+      vesktop
+      mangohud
+      cargo
+      rustc
+      onlyoffice-desktopeditors
       eas-cli
       code-cursor
       cursor-cli
@@ -84,13 +89,10 @@ in {
       kdePackages.krdp
       nero-umu
       volta
-      dotnet-sdk
       dotnet-sdk_9
       nodejs_20
-      nodejs
       nodemon
       obsidian
-      bottles
       git
       mesa-demos
       jdk21
@@ -115,7 +117,6 @@ in {
       ryzenadj
       steamtinkerlaunch
       unrar
-      pkgs-stable.vesktop
       vlc
       mpv
       vulkan-tools
@@ -148,7 +149,6 @@ in {
       python3Packages.reportlab
       gamescope
       heroic
-      lutris
       opentabletdriver
       papirus-icon-theme
       papirus-folders
