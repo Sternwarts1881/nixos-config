@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs,lib, ... }:
 
 {
   services = {
@@ -51,5 +51,6 @@
   zramSwap = {
     enable = true;
   };
+   
 
 }
