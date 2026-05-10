@@ -52,5 +52,29 @@
     enable = true;
   };
    
+ systemd = {
 
+  services = {
+
+    "polkit-agent-helper@" = {
+
+      overrideStrategy = "asDropin";
+
+      serviceConfig = {
+
+        ReadOnlyPaths = "/usr/lib/security";
+
+        ProtectHome = "no";
+
+        PrivateDevices = "no";
+
+        DeviceAllow = "char-video4linux rw";
+
+      };
+
+    };
+
+  };
+
+};
 }
