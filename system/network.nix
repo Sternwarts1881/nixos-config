@@ -4,15 +4,25 @@
   networking = {
     hostName = "nixos";
 
-    wireless.iwd.settings = {
+    networkmanager = {
+      enable = true;
+      wifi = {
+        backend = "iwd";
+        powersave = false;
+      };
+    };
+
+
+    wireless.iwd = {
+      enable = true;
+      settings = {
         General = {
           RoamThreshold = -75;
           RoamThreshold5G = -80;
           RoamRetryInterval = 20;
         };
       };
-
-    networkmanager.enable = true;
+    };
 
     firewall = {
       enable = true;

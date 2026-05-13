@@ -123,16 +123,17 @@ in {
       wget
       vscode
       (python3.withPackages (ps: with ps;[
-      pip
-      requests
-      numpy
-      rdflib
-      defusedxml
-      packaging
-      pyqt5
-      pyqt6
-      pywal
-      reportlab
+        tensorflow
+        pip
+        requests
+        numpy
+        rdflib
+        defusedxml
+        packaging
+        pyqt5
+        pyqt6
+        pywal
+        reportlab
       ]))
       cheese
       chromium
