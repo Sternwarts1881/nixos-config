@@ -123,10 +123,8 @@ in {
       wget
       vscode
       (python3.withPackages (ps: with ps;[
-        tensorflow
         pip
         requests
-        numpy
         rdflib
         defusedxml
         packaging
