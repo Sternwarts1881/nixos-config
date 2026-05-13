@@ -127,6 +127,12 @@ in {
       requests
       numpy
       rdflib
+      defusedxml
+      packaging
+      pyqt5
+      pyqt6
+      pywal
+      reportlab
       ]))
       cheese
       chromium
@@ -141,12 +147,6 @@ in {
       zip
       unzip
       vim
-      python3Packages.defusedxml
-      python3Packages.packaging
-      python3Packages.pyqt5
-      python3Packages.pyqt6
-      python3Packages.pywal
-      python3Packages.reportlab
       gamescope
       heroic
       opentabletdriver
