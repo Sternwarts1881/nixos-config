@@ -3,9 +3,11 @@
 {
   services = {
     displayManager = {
-      sddm = {
+      plasma-login-manager = {
         enable = true;
-        wayland.enable = true;
+        settings = {
+          wayland.enable = true;
+        };
       };
     };
     desktopManager = {
