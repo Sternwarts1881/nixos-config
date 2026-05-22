@@ -1,8 +1,6 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 
-let
-  pkgs-stable = inputs.nixpkgs-stable.legacyPackages.x86_64-linux;
-in {
+{
   programs = {
     gamemode.enable = true;
     java.enable = true;
@@ -39,21 +37,17 @@ in {
       cargo
       rustc
       onlyoffice-desktopeditors
-      eas-cli
       code-cursor
       cursor-cli
       ryubing
       tor
       tor-browser
       proton-vpn
-      android-studio
-      android-tools
       ntfs3g
       tree-sitter
       haruna
       starship
       ghostty
-      jetbrains.rider
       gnome-tweaks
       ffmpeg
       gparted
@@ -63,7 +57,6 @@ in {
       dolphin-emu
       pcsx2
       protonplus
-      ppsspp
       xrdb
       xsettingsd
       posy-cursors
@@ -83,7 +76,6 @@ in {
       kdePackages.plasma-thunderbolt
       lshw
       nil
-      nvtopPackages.full
       firefox
       neovim
       obs-studio

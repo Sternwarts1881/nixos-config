@@ -37,13 +37,4 @@
     tailscale.enable = true;
   };
 
-  systemd = {
-    user = {
-      services = {
-        warp-taskbar = {
-          enable = lib.mkForce false;
-        };
-      };
-    };
-  };
 }

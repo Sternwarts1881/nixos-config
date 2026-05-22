@@ -40,6 +40,11 @@
    
  systemd = {
 
+  slices."nix-daemon".sliceConfig = {
+    ManagedOOMMemoryPressure = "kill";
+    ManagedOOMMemoryPressureLimit = "50%";
+  };
+
   services = {
 
     "polkit-agent-helper@" = {
@@ -58,6 +63,11 @@
 
       };
 
+    };
+
+    "nix-daemon".serviceConfig = {
+      Slice = "nix-daemon.slice";
+      OOMScoreAdjust = 1000;
     };
 
   };
