@@ -11,5 +11,7 @@
     ./services.nix
     ./sound.nix
     ./system.nix
+    ./howdy.nix
+    ./virtualisation.nix
   ];
 }
