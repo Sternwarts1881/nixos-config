@@ -23,6 +23,9 @@
         };
       };
     };
+    nvidia-container-toolkit = {
+      enable = true;
+    };
   };
 
   services = {
