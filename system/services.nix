@@ -36,13 +36,14 @@
 
   zramSwap = {
     enable = true;
+    memoryPercent = 100;
   };
    
  systemd = {
 
   slices."nix-daemon".sliceConfig = {
     ManagedOOMMemoryPressure = "kill";
-    ManagedOOMMemoryPressureLimit = "50%";
+    ManagedOOMMemoryPressureLimit = "80%";
   };
 
   services = {

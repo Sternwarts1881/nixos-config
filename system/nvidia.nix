@@ -13,7 +13,7 @@
       dynamicBoost.enable = true;
       open = false;
       nvidiaSettings = true;
-      package = config.boot.kernelPackages.nvidiaPackages.beta;
+      package = config.boot.kernelPackages.nvidiaPackages.stable;
       prime = {
         amdgpuBusId = "PCI:75:0:0";
         nvidiaBusId = "PCI:1:0:0";

@@ -5,7 +5,7 @@
  
  	/* MediaTek MT7922 Bluetooth devices */
 -	{ USB_DEVICE(0x13d3, 0x3585), .driver_info = BTUSB_MEDIATEK |
-+	{ USB_DEVICE(0x13d3, 0x3584), .driver_info = BTUSB_MEDIATEK |
++	{ USB_DEVICE(0x0489, 0xe0f6), .driver_info = BTUSB_MEDIATEK |
  						     BTUSB_WIDEBAND_SPEECH },
  
  	/* MediaTek MT7922A Bluetooth devices */

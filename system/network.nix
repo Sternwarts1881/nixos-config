@@ -7,14 +7,14 @@
     networkmanager = {
       enable = true;
       wifi = {
-        backend = "iwd";
+   #     backend = "iwd";
         powersave = false;
       };
     };
 
 
     wireless.iwd = {
-      enable = true;
+   #   enable = true;
       settings = {
         General = {
           RoamThreshold = -75;

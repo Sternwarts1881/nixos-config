@@ -67,7 +67,7 @@
       nero-umu
       volta
       dotnet-sdk_9
-      nodejs_20
+      nodejs_24
       nodemon
       obsidian
       git
