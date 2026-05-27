@@ -14,6 +14,7 @@
 
     xserver = {
       enable = true;
+      wacom.enable = true;
     };
     power-profiles-daemon.enable = true;
     locate.enable = true;

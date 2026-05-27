@@ -1,9 +1,8 @@
 { config, pkgs, ... }:
 
 let
-  btusb-mt7922-fix = pkgs.callPackage ../patches/btusb-mt7922-fix.nix {
     kernel = config.boot.kernelPackages.kernel;
-  };
+
 in {
   boot = {
     loader = {
@@ -17,12 +16,6 @@ in {
       # "amdgpu.dcdebugmask=0x10"
       # "rcutree.enable_rcu_lazy=1"
       "btusb.enable_autosuspend=0"
-    ];
-
-    extraModulePackages = [
-      (btusb-mt7922-fix.overrideAttrs (_: {
-        patches = [ ../patches/mt7922-bluetooth-patch ];
-      }))
     ];
 
     kernelModules = ["ntsync"];

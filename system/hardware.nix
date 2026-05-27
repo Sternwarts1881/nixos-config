@@ -20,6 +20,11 @@
       };
     };
 
+    openrazer ={
+      enable = true ;
+      users = ["flkr"];
+    };
+
     amdgpu = {
       overdrive={
         enable = true;
@@ -31,7 +36,6 @@
     enableRedistributableFirmware = true;
   };
 
-  services.xserver.wacom.enable = true;
 
 
 #      powerManagement = {

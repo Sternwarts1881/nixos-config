@@ -32,7 +32,11 @@
 
   environment = {
     systemPackages = with pkgs; [
+      brave
+      polychromatic
+      proton-pass
       texliveFull
+      linux-router
       vesktop
       cargo
       rustc
