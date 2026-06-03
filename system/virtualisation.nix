@@ -40,5 +40,6 @@
     environment.systemPackages = with pkgs;[
     dnsmasq
     distrobox
+    podman-compose
     ];
 }
