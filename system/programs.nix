@@ -32,7 +32,6 @@
 
   environment = {
     systemPackages = with pkgs; [
-      osu-lazer-bin
       pods
       polychromatic
       proton-pass
