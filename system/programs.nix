@@ -32,6 +32,8 @@
 
   environment = {
     systemPackages = with pkgs; [
+      osu-lazer-bin
+      pods
       polychromatic
       proton-pass
       texliveFull
@@ -69,13 +71,13 @@
       kdePackages.krdp
       nero-umu
       volta
-      dotnet-sdk_9
-      nodejs_24
+      dotnet-sdk
+      nodejs
       nodemon
       obsidian
       git
       mesa-demos
-      jdk21
+      jdk
       kdePackages.plasma-thunderbolt
       lshw
       nil
