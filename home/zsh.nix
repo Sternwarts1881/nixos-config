@@ -2,7 +2,6 @@
 
 let
   myAliases = {
-    fedora-enter-ml-env = "source /home/flkr/.conda/bin/activate tf_gpu_env";
   };
 
 in
