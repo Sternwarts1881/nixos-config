@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs,pkgs-stable ,... }:
 
 {
   programs = {
@@ -56,7 +56,7 @@
       ffmpeg
       gparted
       scanmem
-      rpcs3
+      pkgs-stable.rpcs3
       azahar
       dolphin-emu
       pcsx2
