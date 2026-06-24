@@ -93,7 +93,7 @@
       mullvad-vpn
       conda
       qbittorrent
-      joplin-desktop
+      pkgs-stable.joplin-desktop
       ryzenadj
       steamtinkerlaunch
       unrar
