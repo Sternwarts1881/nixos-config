@@ -23,6 +23,7 @@
     mullvad-vpn.enable = true;
     mullvad-vpn.package = pkgs.mullvad-vpn;
     supergfxd.enable = true;
+    upower.enable = true;
     asusd = {
       enable = true;
     };

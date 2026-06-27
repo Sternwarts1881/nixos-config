@@ -3,6 +3,7 @@
   home = {
     packages = with pkgs; [
       # home-manager
+      kdePackages.kirigami
     ];
     username = "flkr";
     homeDirectory = "/home/flkr";

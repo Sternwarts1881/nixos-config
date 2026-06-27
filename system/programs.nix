@@ -10,7 +10,6 @@
     npm.enable = true;
     corectrl.enable=true;
 
-
     appimage = {
       enable = true;
       binfmt = true;
@@ -32,6 +31,7 @@
 
   environment = {
     systemPackages = with pkgs; [
+      xwayland-satellite
       pods
       polychromatic
       proton-pass

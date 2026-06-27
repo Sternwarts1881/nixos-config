@@ -13,5 +13,6 @@
     ./system.nix
     ./howdy.nix
     ./virtualisation.nix
+    ./niri.nix
   ];
 }
