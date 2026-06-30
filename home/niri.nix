@@ -8,6 +8,15 @@
 
 environment {
 	QS_ICON_THEME "Gruvbox-Plus-Dark"	
+	QT_QPA_PLATFORMTHEME "kde"
+    QT_QPA_PLATFORM "wayland"
+    XDG_CURRENT_DESKTOP "kde"
+    XDG_MENU_PREFIX "plasma-"
+    GTK_DECORATION_LAYOUT ""
+    GTK_THEME "Gruvbox-BL-ML-Dark-Soft"
+
+    QML2_IMPORT_PATH "/run/current-system/sw/lib/qt-6/qml:$HOME/.nix-profile/lib/qt-6/qml:/etc/profiles/per-user/flkr/lib/qt-6/qml"
+    QT_PLUGIN_PATH "/run/current-system/sw/lib/qt-6/plugins:$HOME/.nix-profile/lib/qt-6/plugins:/etc/profiles/per-user/flkr/lib/qt-6/plugins"
 }
 
 spawn-at-startup "noctalia-shell"
