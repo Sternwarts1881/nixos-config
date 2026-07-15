@@ -5,7 +5,7 @@
   xdg.configFile."niri/config.kdl".text = ''
 
 //spawn-at-startup "gsettings" "set" "org.gnome.desktop.interface" "icon-theme" "Papirus"
-
+spawn-at-startup "/run/current-system/sw/libexec/polkit-kde-authentication-agent-1"
 environment {
 	QS_ICON_THEME "Gruvbox-Plus-Dark"	
 	QT_QPA_PLATFORMTHEME "kde"
@@ -67,7 +67,7 @@ input {
         // drag false
         // drag-lock
         natural-scroll
-        accel-speed 0.0
+        accel-speed 0.5
         accel-profile "flat"
         // scroll-method "two-finger"
         // disabled-on-external-mouse
@@ -142,7 +142,7 @@ input {
 // https://niri-wm.github.io/niri/Configuration:-Layout
 layout {
     // Set gaps around windows in logical pixels.
-    gaps 16
+    gaps 12
 
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
@@ -394,8 +394,8 @@ binds {
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+T hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
-    Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
-    Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+    Mod+D hotkey-overlay-title="Run an Application: " { spawn "noctalia-shell" "ipc" "call" "launcher" "toggle"; }
+    Mod+L hotkey-overlay-title="Lock the Screen: " { spawn "noctalia-shell" "ipc" "call" "lockScreen" "lock"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
@@ -435,10 +435,10 @@ binds {
     Mod+Down  { focus-window-down; }
     Mod+Up    { focus-window-up; }
     Mod+Right { focus-column-right; }
-    Mod+H     { focus-column-left; }
-    Mod+J     { focus-window-down; }
-    Mod+K     { focus-window-up; }
-    Mod+L     { focus-column-right; }
+ //   Mod+H     { focus-column-left; }
+ //   Mod+J     { focus-window-down; }
+ //   Mod+K     { focus-window-up; }
+ //   Mod+L     { focus-column-right; }
 
     Mod+Ctrl+Left  { move-column-left; }
     Mod+Ctrl+Down  { move-window-down; }
