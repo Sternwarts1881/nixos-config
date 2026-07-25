@@ -40,6 +40,8 @@
       vesktop
       cargo
       rustc
+      rust-analyzer     
+      rustfmt
       onlyoffice-desktopeditors
       code-cursor
       cursor-cli
