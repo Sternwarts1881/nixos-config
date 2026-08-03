@@ -31,6 +31,7 @@
 
   environment = {
     systemPackages = with pkgs; [
+      kdePackages.filelight
       xwayland-satellite
       pods
       polychromatic
