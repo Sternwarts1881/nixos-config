@@ -21,7 +21,7 @@
     smartd.enable = true;
     openssh.enable = true;
     mullvad-vpn.enable = true;
-    mullvad-vpn.package = pkgs.mullvad-vpn;
+    mullvad-vpn.gui.enable = true;
     supergfxd.enable = true;
     upower.enable = true;
     asusd = {
