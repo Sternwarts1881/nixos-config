@@ -6,6 +6,7 @@
     fwupd.enable = true;
     printing.enable = true;
     system76-scheduler.enable = true;
+    displayManager.defaultSession = lib.mkForce "plasma";
 
     udev.extraRules = ''
   ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="0bda", ATTR{idProduct}=="8153", ATTR{power/autosuspend}="-1"

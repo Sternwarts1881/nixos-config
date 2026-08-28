@@ -31,6 +31,7 @@
 
   environment = {
     systemPackages = with pkgs; [
+      devenv
       kdePackages.filelight
       xwayland-satellite
       pods
