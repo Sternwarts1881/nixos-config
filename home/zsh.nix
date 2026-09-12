@@ -51,6 +51,9 @@ programs = {
           "wd"
         ];
       };
+      initContent = ''
+        eval "$(devenv hook zsh)"
+      '';
     };
   };
 }

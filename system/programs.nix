@@ -10,7 +10,6 @@
     npm.enable = true;
     corectrl.enable=true;
 
-
     appimage = {
       enable = true;
       binfmt = true;
@@ -32,6 +31,9 @@
 
   environment = {
     systemPackages = with pkgs; [
+      devenv
+      kdePackages.filelight
+      xwayland-satellite
       pods
       polychromatic
       proton-pass
@@ -40,6 +42,8 @@
       vesktop
       cargo
       rustc
+      rust-analyzer     
+      rustfmt
       onlyoffice-desktopeditors
       code-cursor
       cursor-cli

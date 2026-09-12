@@ -6,6 +6,7 @@
     fwupd.enable = true;
     printing.enable = true;
     system76-scheduler.enable = true;
+    displayManager.defaultSession = lib.mkForce "plasma";
 
     udev.extraRules = ''
   ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="0bda", ATTR{idProduct}=="8153", ATTR{power/autosuspend}="-1"
@@ -21,8 +22,9 @@
     smartd.enable = true;
     openssh.enable = true;
     mullvad-vpn.enable = true;
-    mullvad-vpn.package = pkgs.mullvad-vpn;
+    mullvad-vpn.gui.enable = true;
     supergfxd.enable = true;
+    upower.enable = true;
     asusd = {
       enable = true;
     };
