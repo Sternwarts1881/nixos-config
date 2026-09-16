@@ -1,6 +1,10 @@
 { pkgs,pkgs-stable ,... }:
 
 {
+    nixpkgs.config.permittedInsecurePackages = [
+      "electron-40.10.5"
+    ];
+
   programs = {
     gamemode.enable = true;
     java.enable = true;
@@ -31,6 +35,7 @@
 
   environment = {
     systemPackages = with pkgs; [
+      jetbrains.datagrip
       devenv
       kdePackages.filelight
       xwayland-satellite
