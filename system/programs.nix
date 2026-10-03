@@ -37,6 +37,7 @@
     systemPackages = with pkgs; [
       jetbrains.datagrip
       devenv
+      openrazer-daemon
       kdePackages.filelight
       xwayland-satellite
       pods
@@ -151,7 +152,6 @@
       wine64
       wineWow64Packages.stable
       winetricks
-      foliate
     ];
   };
 }
