@@ -11,11 +11,12 @@
     udev.extraRules = ''
   ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="0bda", ATTR{idProduct}=="8153", ATTR{power/autosuspend}="-1"
   ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="0bda", ATTR{idProduct}=="8153", ATTR{power/control}="on"
+  ACTION=="add|change", SUBSYSTEM=="usb", ATTR{idVendor}=="0c45", ATTR{idProduct}=="8009", ATTR{power/control}="on", ATTR{power/autosuspend_delay_ms}="-1"
+  ACTION=="add|change", SUBSYSTEM=="usb", ATTR{idVendor}=="1532", ATTR{idProduct}=="00c1", ATTR{power/control}="on", ATTR{power/autosuspend_delay_ms}="-1"
 '';
 
     xserver = {
       enable = true;
-      wacom.enable = true;
     };
     power-profiles-daemon.enable = true;
     locate.enable = true;
@@ -33,8 +34,12 @@
 
   powerManagement.resumeCommands = ''
   # r8152 sürücüsünü (Realtek Ethernet) yeniden başlat
-  ${pkgs.kmod}/bin/modprobe -r r8152
-  ${pkgs.kmod}/bin/modprobe r8152
+  # ${pkgs.kmod}/bin/modprobe -r r8152
+  # ${pkgs.kmod}/bin/modprobe r8152
+  sleep 1
+  echo -n "0000:75:00.4" > /sys/bus/pci/drivers/xhci_hcd/unbind
+  sleep 1
+  echo -n "0000:75:00.4" > /sys/bus/pci/drivers/xhci_hcd/bind
 '';
 
   zramSwap = {

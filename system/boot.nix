@@ -16,6 +16,7 @@ in {
       # "amdgpu.dcdebugmask=0x10"
       # "rcutree.enable_rcu_lazy=1"
       "btusb.enable_autosuspend=0"
+      "usbcore.autosuspend=-1"
     ];
 
     kernelModules = ["ntsync"];

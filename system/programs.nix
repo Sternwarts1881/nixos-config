@@ -35,6 +35,10 @@
 
   environment = {
     systemPackages = with pkgs; [
+      osu-lazer-bin
+      usbutils
+      antigravity-ide
+      yt-dlp
       jetbrains.datagrip
       devenv
       openrazer-daemon
@@ -51,9 +55,6 @@
       rust-analyzer     
       rustfmt
       onlyoffice-desktopeditors
-      code-cursor
-      cursor-cli
-      ryubing
       tor
       tor-browser
       proton-vpn
@@ -67,8 +68,6 @@
       gparted
       scanmem
       pkgs-stable.rpcs3
-      azahar
-      dolphin-emu
       pcsx2
       protonplus
       xrdb
@@ -103,7 +102,7 @@
       mullvad-vpn
       conda
       qbittorrent
-      pkgs-stable.joplin-desktop
+      joplin-desktop
       ryzenadj
       steamtinkerlaunch
       unrar
@@ -138,7 +137,6 @@
       vim
       gamescope
       heroic
-      opentabletdriver
       papirus-icon-theme
       papirus-folders
       libsForQt5.qtstyleplugin-kvantum

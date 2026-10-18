@@ -32,6 +32,11 @@
       };
     };
 
+    opentabletdriver = {
+      enable = true;
+      daemon.enable = true;
+    };
+
     sane.enable = true; # sane (tarayıcı desteği)
     enableRedistributableFirmware = true;
   };
