@@ -39,6 +39,7 @@
 
     sane.enable = true; # sane (tarayıcı desteği)
     enableRedistributableFirmware = true;
+    i2c.enable = true;
   };
 
 
