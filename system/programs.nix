@@ -35,9 +35,16 @@
 
   environment = {
     systemPackages = with pkgs; [
+      github-desktop
+      gh
+      antigravity-cli
+      antigravity-hub
+      pipenv
+      tauon
+      gimp
+      claude-code
       osu-lazer-bin
       usbutils
-      antigravity-ide
       yt-dlp
       jetbrains.datagrip
       devenv
