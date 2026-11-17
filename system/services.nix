@@ -12,6 +12,9 @@
   ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="0bda", ATTR{idProduct}=="8153", ATTR{power/autosuspend}="-1"
   ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="0bda", ATTR{idProduct}=="8153", ATTR{power/control}="on"
   ACTION=="add|change", SUBSYSTEM=="usb", ATTR{idVendor}=="0c45", ATTR{idProduct}=="8009", ATTR{power/control}="on", ATTR{power/autosuspend_delay_ms}="-1"
+  # AK820 Pro: remote wakeup acikken uykuda kilitleniyor (error -71), kapat
+  ACTION=="add|change", SUBSYSTEM=="usb", ATTR{idVendor}=="0c45", ATTR{idProduct}=="8009", ATTR{power/wakeup}="disabled"
+  ACTION=="add|change", SUBSYSTEM=="pci", ATTR{vendor}=="0x10ec", ATTR{device}=="0x525a", ATTR{power/control}="on"
   ACTION=="add|change", SUBSYSTEM=="usb", ATTR{idVendor}=="1532", ATTR{idProduct}=="00c1", ATTR{power/control}="on", ATTR{power/autosuspend_delay_ms}="-1"
 '';
 
@@ -40,6 +43,13 @@
   echo -n "0000:75:00.4" > /sys/bus/pci/drivers/xhci_hcd/unbind
   sleep 1
   echo -n "0000:75:00.4" > /sys/bus/pci/drivers/xhci_hcd/bind
+  for d in /sys/bus/usb/devices/*; do
+    if [ "$(cat $d/idVendor 2>/dev/null)" = "056a" ]; then
+      echo 0 > $d/authorized
+      sleep 1
+      echo 1 > $d/authorized
+    fi
+  done
 '';
 
   zramSwap = {
